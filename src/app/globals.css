@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FFF9F4;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-instrument-regular: var(--font-instrument-regular);
+  --font-instrument-semibold: var(--font-instrument-semibold);
+}
+
+@font-face {
+  font-family: 'InstrumentSans-Regular';
+  src: url('/fonts/InstrumentSans-Regular.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'InstrumentSans-SemiBold';
+  src: url('/fonts/InstrumentSans-SemiBold.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: InstrumentSans-Regular, InstrumentSans-SemiBold, sans-serif;
+}
+
+/* Custom font styles */
+h1, h3 {
+  font-family: var(--font-instrument-semibold), 'InstrumentSans-SemiBold', sans-serif;
+}
+
+p {
+  font-family: var(--font-instrument-regular), 'InstrumentSans-Regular', sans-serif;
+}
